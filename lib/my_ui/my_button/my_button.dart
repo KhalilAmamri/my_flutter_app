@@ -3,7 +3,7 @@ import 'package:my_flutter_app/my_tools/colors.dart';
 
 class MyButton extends StatelessWidget {
   final String txt;
-  const MyButton({super.key, required this.txt});
+  const MyButton({super.key, required this.txt, required Null Function() onClick});
 
   @override
   Widget build(BuildContext context) {
