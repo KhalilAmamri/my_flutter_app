@@ -11,7 +11,7 @@ class LoginUi extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Welcome to MyVideoApp',
+            'Welcome too MyVideoApp',
             style: TextStyle(fontSize: 24, color: Colors.white),
           ),
           Image.asset("assets/images/MeetingImage.png"),

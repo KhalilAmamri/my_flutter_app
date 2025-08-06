@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "752098455389",
+    "project_id": "my-video-app-9d64c",
+    "storage_bucket": "my-video-app-9d64c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752098455389:android:fd0d99795158f4111c82b4",
+        "android_client_info": {
+          "package_name": "com.KhalilAm_app.my_flutter_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCV92_L2rZIwR2450u3QuLIfEFuVSTUN_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
