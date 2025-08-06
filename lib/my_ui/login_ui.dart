@@ -12,7 +12,7 @@ class LoginUi extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Welcome to MyVideoApp',
+            'Welcome to MyVideoAppp',
             style: TextStyle(fontSize: 24, color: Colors.white),
           ),
           Padding(
@@ -21,12 +21,14 @@ class LoginUi extends StatelessWidget {
           ),
           MyButton(
             txt: 'Join Now or Meeting',
-            onClick: () {
+            onPressed: () {
+              // Use onPressed instead of onClick
+              print("Join Now or Meeting button clicked");
               try {
-                _authCode.signInWithGoogle(); // Await the sign-in process
+                _authCode.signInWithGoogle();
                 print('Sign in with Google successful');
               } catch (e) {
-                print('Error during sign-in: $e'); // Handle any errors
+                print('Error during sign-in: $e');
               }
             },
           ),
