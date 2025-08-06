@@ -1,8 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/my_tools/colors.dart';
 import 'package:my_flutter_app/my_ui/login_ui.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // Initialize Firebase if needed
+  await Firebase.initializeApp(); // Uncomment if using Firebase
   runApp(const MyApp());
 }
 
