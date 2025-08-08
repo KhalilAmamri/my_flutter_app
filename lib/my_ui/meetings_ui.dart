@@ -1,8 +1,23 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/my_code/jitsi_code.dart';
 import 'package:my_flutter_app/my_ui/my_button/my_icons.dart';
 
 class MeetingsUi extends StatelessWidget {
-  const MeetingsUi({super.key});
+  // const MeetingsUi({super.key});
+  final JitsiCode _jitsiCode = JitsiCode();
+
+  CreateNewMeeting() {
+    var random = Random();
+    String roomName = (random.nextInt(10000000) + 1000000).toString();
+
+    _jitsiCode.CreateMeet(
+      roomName: roomName,
+      isAudioMuted: true,
+      isVideoMuted: true,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +30,7 @@ class MeetingsUi extends StatelessWidget {
             icon: Icons.video_call,
             text: 'New Meeting',
             Onclick: () {
-              print('New Meeting clicked');
+              CreateNewMeeting();
             },
           ),
           MyIcons(

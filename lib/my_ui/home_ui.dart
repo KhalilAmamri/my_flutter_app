@@ -14,7 +14,7 @@ class _HomeUiState extends State<HomeUi> {
 
   // Pages for each navigation item
   final List<Widget> _pages = [
-    const MeetingsUi(), // New Meeting button opens meetings_ui.dart
+    MeetingsUi(), // New Meeting button opens meetings_ui.dart
     const SavedUi(), // Meeting button opens saved_ui.dart
     const Center(
       child: Text(

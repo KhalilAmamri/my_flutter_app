@@ -7,6 +7,7 @@ class AuthCode {
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   Stream<User?> get authChanges => _auth.authStateChanges();
+  User? get currentUser => _auth.currentUser;
   Future<void> signInWithGoogle() async {
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
