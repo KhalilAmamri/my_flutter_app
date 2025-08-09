@@ -2,9 +2,15 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/my_code/jitsi_code.dart';
+import 'package:my_flutter_app/my_ui/join_meet.dart';
 import 'package:my_flutter_app/my_ui/my_button/my_icons.dart';
 
-class MeetingsUi extends StatelessWidget {
+class MeetingsUi extends StatefulWidget {
+  @override
+  State<MeetingsUi> createState() => _MeetingsUiState();
+}
+
+class _MeetingsUiState extends State<MeetingsUi> {
   // const MeetingsUi({super.key});
   final JitsiCode _jitsiCode = JitsiCode();
 
@@ -17,6 +23,12 @@ class MeetingsUi extends StatelessWidget {
       isAudioMuted: true,
       isVideoMuted: true,
     );
+  }
+
+  JoinMeeting() {
+    Navigator.of(
+      context,
+    ).push(MaterialPageRoute(builder: (context) => JoinMeetUI()));
   }
 
   @override
@@ -37,7 +49,7 @@ class MeetingsUi extends StatelessWidget {
             icon: Icons.add_box_rounded,
             text: 'Join Meeting',
             Onclick: () {
-              print('Join Meeting clicked');
+              JoinMeeting();
             },
           ),
           MyIcons(
