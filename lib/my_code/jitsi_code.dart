@@ -1,9 +1,10 @@
 import 'package:jitsi_meet_wrapper/jitsi_meet_wrapper.dart';
 import 'package:my_flutter_app/my_code/auth_code.dart';
+import 'package:my_flutter_app/my_code/firestoredb_code.dart';
 
 class JitsiCode {
   final AuthCode _authCode = AuthCode();
-
+  final FireStoreDB _fireStoreDB = FireStoreDB();
   Future<void> CreateMeet({
     required String roomName,
     required bool isAudioMuted,
@@ -20,7 +21,7 @@ class JitsiCode {
         isAudioMuted: isAudioMuted,
         isVideoMuted: isVideoMuted,
       );
-
+      _fireStoreDB.addMeetingtoDB(roomName);
       await JitsiMeetWrapper.joinMeeting(
         options: options,
         listener: JitsiMeetingListener(
